@@ -1,0 +1,106 @@
+@use "../abstracts" as *;
+.cookie-banner {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-top: 1px solid $accent-primary;
+  background-color: $base;
+  color: $text;
+  padding: 2em;
+  text-align: center;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.cookie-banner.hide {
+  display: none;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  z-index: 11;
+}
+
+.modal-content {
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 80%;
+  max-height: 80%;
+  overflow-y: auto;
+  color: $white;
+
+  .modal-actions {
+    position: absolute;
+    top: 1em;
+    right: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+    .btn__close {
+      cursor: pointer;
+      padding: 0.3em 0.5em 0.2em;
+      svg {
+        fill: $white;
+      }
+    }
+  }
+  .policy__content {
+    width: min(60em, calc(100% - 2em));
+    margin-inline: auto;
+    h2 {
+      font-size: 3em;
+      font-weight: bold;
+      margin-bottom: 1em;
+    }
+    h3 {
+      font-size: 2.4em;
+      font-weight: bold;
+      margin-block: 1em;
+    }
+    ul {
+      list-style: disc;
+      li {
+        margin-inline: 20px 0;
+      }
+    }
+  }
+}
+
+.modal-content p {
+  margin-bottom: 15px;
+}
+
+.buttons {
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  gap: 1em;
+
+  &.center {
+    justify-content: center;
+  }
+}
+
+.c__btn {
+  background-color: transparent;
+  border: 1px solid $white;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  color: $white;
+  padding: 0.5em 1em;
+  border-radius: 0.3em;
+  cursor: pointer;
+}

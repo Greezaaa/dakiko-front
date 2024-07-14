@@ -1,0 +1,51 @@
+@use "../abstracts/colors" as *;
+// @use "../abstracts/fonts" as *;
+$--fs-50: clamp(0.3rem, calc(0.3rem + 0.08vw), 0.5rem);
+$--fs-100: clamp(0.5rem, calc(0.8rem + 0.08vw), 0.7rem);
+$--fs-200: clamp(0.7rem, calc(1.84rem + 0.08vw), 0.8rem);
+$--fs-300: clamp(0.94rem, calc(0.92rem + 0.08vw), 0.98rem);
+$--fs-400: clamp(1.13rem, calc(1.06rem + 0.33vw), 1.31rem);
+$--fs-500: clamp(1.35rem, calc(1.21rem + 0.69vw), 1.75rem);
+$--fs-600: clamp(1.62rem, calc(1.37rem + 1.24vw), 2.33rem);
+$--fs-700: clamp(1.94rem, calc(1.54rem + 2.03vw), 3.11rem);
+$--fs-800: clamp(2.33rem, calc(1.7rem + 3.15vw), 4.14rem);
+$--fs-900: clamp(2.8rem, calc(1.85rem + 4.74vw), 5.52rem);
+
+.working_on {
+  width: min(60em, calc(100% - 4em));
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  min-height: 90dvh;
+  padding: 2em;
+
+  img {
+    margin-inline: auto;
+    max-width: 15em;
+    margin-block: 1em 3em;
+  }
+  h2 {
+    font-size: $--fs-800;
+    font-weight: bold;
+    text-wrap: balance;
+    font-variant: small-caps;
+  }
+
+  p {
+    text-wrap: pretty;
+    font-size: $--fs-500;
+  }
+
+  a {
+    font-family: "SpaceMono";
+    text-align: center;
+    text-decoration: none;
+    color: $text;
+    &:hover {
+      // color: darken($text, 10%);
+      font-weight: 900;
+    }
+  }
+}

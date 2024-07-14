@@ -1,0 +1,29 @@
+@use "../abstracts" as *;
+.banner-top {
+  position: absolute;
+  right: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1em;
+  z-index: 9;
+  a {
+    width: fit-content;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 0.5em;
+    color: $text;
+    svg {
+      width: 16px;
+    }
+  }
+  @media screen and (max-width: 45em) {
+    .banner__text {
+      display: none;
+    }
+  }
+}

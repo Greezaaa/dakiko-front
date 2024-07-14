@@ -1,0 +1,30 @@
+@use "../abstracts" as *;
+
+::-webkit-scrollbar {
+  width: 3px;
+  visibility: hidden;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+/* Handler */
+::-webkit-scrollbar-thumb {
+  max-height: 20px;
+  background-color: $accent-primary;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: $accent-primary;
+}
+
+@supports (-ms-overflow-style: none) {
+  html {
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+}
+
+::selection {
+  color: $accent-secondary;
+  background: $accent-dark;
+}

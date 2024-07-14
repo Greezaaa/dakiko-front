@@ -1,0 +1,12 @@
+@function color($color-name, $opacity: 1) {
+  $color: map-get($colors, $color-name);
+  @if $color {
+    @return rgba($color, $opacity);
+  } @else {
+    @warn "Unknown `#{$color-name}` in color map.";
+    @return null;
+  }
+}
+@function fontWeight($fontWeight) {
+  @return var(--fontWeight-#{$fontWeight});
+}

@@ -1,0 +1,96 @@
+body {
+  --text-light: hsl(15, 12%, 79%);
+  --base-light: hsl(0, 0%, 0%);
+  --white-light: hsl(0, 0%, 100%);
+  --black-light: hsl(0, 0%, 0%);
+  --accent-primary-light: hsl(24, 89%, 38%);
+  --accent-tertiary-light: hsl(34, 71%, 54%);
+  --accent-secondary-light: hsl(75, 14%, 45%);
+  --accent-dark-light: hsl(24, 53%, 24%);
+
+  --text-dark: hsl(0, 0%, 10%);
+  --base-dark: hsl(0, 0%, 90%);
+  --white-dark: hsl(0, 0%, 100%);
+  --black-dark: hsl(0, 0%, 0%);
+  --accent-primary-dark: hsl(24, 89%, 38%);
+  --accent-secondary-dark: hsl(34, 71%, 54%);
+  --accent-tertiary-dark: hsl(75, 14%, 45%);
+  --accent-dark-dark: hsl(24, 53%, 24%);
+}
+
+body.dark {
+  --text: var(--text-light);
+  --base: var(--base-light);
+  --white: var(--white-light);
+  --black: var(--black-light);
+  --accent-primary: var(--accent-primary-light);
+  --accent-secondary: var(--accent-secondary-light);
+  --accent-tertiary: var(--accent-tertiary-light);
+  --accent-dark: var(--accent-dark-light);
+}
+
+body {
+  --text: var(--text-dark);
+  --base: var(--base-dark);
+  --white: var(--white-dark);
+  --black: var(--black-dark);
+  --accent-primary: var(--accent-primary-dark);
+  --accent-secondary: var(--accent-secondary-dark);
+  --accent-tertiary: var(--accent-tertiary-dark);
+  --accent-dark: var(--accent-dark-dark);
+}
+
+$accent-primary: var(--accent-primary);
+$accent-secondary: var(--accent-secondary);
+$accent-tertiary: var(--accent-tertiary);
+$accent-dark: var(--accent-dark);
+$text: var(--text);
+$base: var(--base);
+$white: var(--white);
+$black: var(--black);
+
+// body {
+//   --text-light: hsl(0, 0%, 90%);
+//   --base-light: hsl(0, 0%, 10%);
+//   --white-light: hsl(0, 0%, 100%);
+//   --black-light: hsl(0, 0%, 20%);
+//   --accent-primary-light: hsl(5, 88%, 55%);
+//   --accent-secondary-light: hsl(74, 97%, 51%);
+//   --accent-dark-light: hsl(192, 46%, 17%);
+
+//   --text-dark: hsl(0, 0%, 10%);
+//   --base-dark: hsl(0, 0%, 90%);
+//   --white-dark: hsl(0, 0%, 100%);
+//   --black-dark: hsl(0, 0%, 20%);
+//   --accent-primary-dark: hsl(5, 88%, 55%);
+//   --accent-secondary-dark: hsl(74, 97%, 51%);
+//   --accent-dark-dark: hsl(192, 46%, 17%);
+// }
+
+// body {
+//   --text: var(--text-light);
+//   --base: var(--base-light);
+//   --white: var(--white-light);
+//   --black: var(--black-light);
+//   --accent-primary: var(--accent-primary-light);
+//   --accent-secondary: var(--accent-secondary-light);
+//   --accent-dark: var(--accent-dark-light);
+// }
+
+// body.dark {
+//   --text: var(--text-dark);
+//   --base: var(--base-dark);
+//   --white: var(--white-dark);
+//   --black: var(--black-dark);
+//   --accent-primary: var(--accent-primary-dark);
+//   --accent-secondary: var(--accent-secondary-dark);
+//   --accent-dark: var(--accent-dark-dark);
+// }
+
+// $accent-primary: var(--accent-primary);
+// $accent-secondary: var(--accent-secondary);
+// $accent-dark: var(--accent-dark);
+// $text: var(--text);
+// $base: var(--base);
+// $white: var(--white);
+// $black: var(--black);

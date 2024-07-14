@@ -1,0 +1,191 @@
+@use "../abstracts" as *;
+$--logo-height: 6em;
+$--span-height: 0.3em;
+
+#header {
+  position: fixed;
+  z-index: 7;
+  width: 100%;
+  padding-inline: 2em;
+  padding-block: 1em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+
+  & > .main-logo {
+    width: $--logo-height;
+    margin-left: 0;
+    margin-right: auto;
+    transition: transform 300ms;
+
+    &:hover {
+      rotate: 350deg;
+      animation: shake 0.5s;
+    }
+  }
+
+  @keyframes shake {
+    0% {
+      transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+      transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+      transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+      transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+      transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+      transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+      transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+      transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+      transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+      transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+      transform: translate(1px, -2px) rotate(-1deg);
+    }
+  }
+
+  & > header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    & > .extras {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      margin-left: auto;
+      align-items: center;
+      justify-content: center;
+      translate: 0 2em;
+    }
+    .main-menu {
+      display: none;
+    }
+  }
+
+  &.scrolled {
+    & > header {
+      & .main-menu {
+        display: block;
+        position: absolute;
+        top: 30vh;
+        right: 0;
+        opacity: 0;
+        height: auto;
+        max-height: 0;
+        overflow: hidden;
+        translate: 10em 0;
+        @include transition300;
+        padding: 2em;
+        width: max-content;
+        ul {
+          list-style: none;
+          display: flex;
+          flex-direction: column;
+          gap: 1em;
+          font-size: 2em;
+
+          li {
+            position: relative;
+            &:after {
+              width: 0.1em;
+              content: "";
+              position: absolute;
+              left: -1em;
+              background-color: $accent-primary;
+              height: 140%;
+              @include transition300;
+              z-index: -1;
+              top: -20%;
+            }
+            a {
+              color: $text;
+              text-decoration: none;
+              font-variant: small-caps;
+              @include transition300;
+            }
+            &:hover {
+              a {
+                color: $base;
+              }
+              &:after {
+                width: calc(100% + 4em);
+              }
+            }
+          }
+        }
+      }
+      &.open .main-menu {
+        translate: 0 0;
+        opacity: 1;
+        max-height: 120em;
+        background-color: $accent-secondary;
+      }
+    }
+  }
+}
+
+.menu__btn {
+  display: block;
+  width: 2em;
+  height: 2em;
+  background-color: transparent;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  gap: $--span-height;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 9;
+
+  & > span {
+    display: block;
+    width: $--span-height;
+    height: $--span-height;
+    background-color: $text;
+    border-radius: calc($--span-height * 10);
+    @include transition300;
+    position: relative;
+  }
+
+  &:hover span {
+    width: 100%;
+  }
+}
+
+.open .menu__btn {
+  span {
+    width: 100%;
+  }
+
+  span:nth-child(1) {
+    transform: translateY(0.6em) rotate(45deg);
+  }
+
+  span:nth-child(2) {
+    opacity: 0;
+  }
+
+  span:nth-child(3) {
+    transform: translateY(-0.6em) rotate(-45deg);
+  }
+}

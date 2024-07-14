@@ -1,0 +1,27 @@
+// @include size(20, 40);
+@mixin size($w, $h: $w) {
+  @if type-of($w) == 'number' {
+    width: $w + px;
+  } @else {
+    width: $w;
+  }
+  @if type-of($h) == 'number' {
+    height: $h + px;
+  } @else {
+    height: $h;
+  }
+}
+
+// @include btn-type(text, 40);
+@mixin btn-type($type, $length: 40) {
+  @if ($type == text) {
+    @include size(auto, $length);
+  } @else if ($type == text-icon) {
+    @include size(auto, $length);
+  } @else if ($type == icon) {
+    @include size($length);
+  } @else {
+    @warn "Buttons must be this types: 'text', 'text-icon' or 'icon'";
+    @include size(auto, $length);
+  }
+}

@@ -1,0 +1,28 @@
+@use "../abstracts" as *;
+
+.settings {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  border-radius: 1em;
+  opacity: 0.5;
+  &:hover {
+    opacity: 1;
+    @include transition300;
+  }
+  &.active {
+    opacity: 1;
+    @include transition300;
+  }
+  .settings_icon {
+    background-color: transparent;
+    filter: drop-shadow(0 0 5px $base);
+    border: none;
+    color: $text;
+    .icon_setting {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+  }
+}

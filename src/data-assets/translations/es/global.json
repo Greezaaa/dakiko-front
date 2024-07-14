@@ -1,0 +1,203 @@
+{
+  "global": {
+    "days": {
+      "Monday": "Lunes",
+      "Tuesday": "Martes",
+      "Wednesday": "Miércoles",
+      "Thursday": "Jueves",
+      "Friday": "Viernes",
+      "Saturday": "Sábado",
+      "Sunday": "Domingo"
+    },
+    "common": {
+      "logoLink": "Pasión por la Pizza",
+      "logo": "Logo de DaKiko svg"
+    },
+    "seo": {
+      "metaTags": {
+        "description": "Disfruta del auténtico sabor de Italia en nuestra pizzería familiar. Pizzas al horno de piedra y pasta fresca, hechas con recetas tradicionales.",
+        "keywords": "pizza, pasta, pasta e pizza, la mejor pizza ibiza, pizza fresca, pizzería, comida italiana, restaurante italiano, horno de piedra"
+      },
+      "openGraph": {
+        "title": "Pasta e Pizza - Da Kiko | Ibiza",
+        "description": "Disfruta del auténtico sabor de Italia en nuestra pizzería familiar. Pizzas al horno de piedra y pasta fresca, hechas con recetas tradicionales.",
+        "image": "./src/images/pizza.webp",
+        "url": "https://dakiko.es",
+        "type": "sitio web"
+      }
+    }
+  },
+  "header": {
+    "nav": {
+      "contact": "Contacto",
+      "home": "Inicio",
+      "menu": "Menú",
+      "about": "Acerca de",
+      "schedules": "Horarios",
+      "bruschettas": "Bruschettas",
+      "pasta": "Pasta",
+      "pizza": "Pizza"
+    },
+    "topBanner": {
+      "adres": "Nuestra ubicación: ",
+      "phone": "Mensaje a",
+      "status": "El restaurante está",
+      "open": "abierto ahora",
+      "close": "cerrado ahora"
+    }
+  },
+  "home": {
+    "hero": {
+      "welcome": "Bienvenido/a",
+      "name": "DaKiko - Pasta e Pizza",
+      "subtitle": "",
+      "slogan1": "¡Ciao! Soy Kiko, el corazón de este pequeño rincón de Italia en la hermosa Playa d'en Bossa. Aquí ofrezco sensaciones inolvidables para tu paladar, llenas de auténticos sabores italianos."
+    },
+    "about": {
+      "passion": {
+        "title": "Una Pasión por la Pizza",
+        "desc": "Cada pizza que sale de mi horno de piedra es mi obra de amor y el resultado de muchos años de experiencia.",
+        "desc_2": "Desde la selección de ingredientes frescos y locales hasta el proceso de fermentación de al menos 16 horas, me aseguro de que cada bocado sea una experiencia única.",
+        "desc_3": "Nada de congelados, solo el producto más fresco y de la mejor calidad."
+      },
+      "quality": {
+        "title": "Tradición y Calidad",
+        "desc": "He tenido el placer de dirigir pizzerías en Italia, Bulgaria y España, y en cada lugar he llevado conmigo el compromiso de ofrecer comida italiana auténtica y deliciosa.",
+        "desc_2": "En DaKiko, cada plato de pasta y cada pizza están hechos con recetas tradicionales y un toque personal que refleja mi amor por la cocina."
+      },
+      "place": {
+        "title": "Un Rincón de Italia en Ibiza",
+        "desc": "Ven y disfruta de una experiencia gastronómica inigualable en mi pequeña pizzería.",
+        "desc_2": "Ya sea que estés buscando 'the best pizza in Ibiza' o simplemente desees una comida italiana auténtica, DaKiko - Pasta e Pizza es tu lugar.",
+        "desc_3": "Siente el calor del horno de piedra, el aroma de la masa recién hecha, y déjate llevar..."
+      },
+      "callAction": {
+        "title": "¡Te Espero!",
+        "desc": "Así que, si estás en Playa d'en Bossa, no dudes en visitarme. Cada pizza y plato de pasta es una invitación a disfrutar, relajarte y saborear lo mejor de la cocina italiana.",
+        "desc_2": "¡Nos vemos pronto!"
+      }
+    },
+    "schedules": {
+      "close": "cerrar",
+      "open": "abrir",
+      "title": "Horarios de Apertura",
+      "subtitle": "Me encanta verte.",
+      "desc": "¡Diseñados para que disfrutes de deliciosa comida italiana cuando quieras!",
+      "desc_2": "Ven para un almuerzo relajado, una cena romántica o una reunión con amigos en DaKiko - Pasta e Pizza.",
+      "desc_3": "Te estaré esperando."
+    }
+  },
+  "menu": {
+    "extra": "Cada ingrediente extra",
+    "pizzas": {
+      "name": "Pizzas",
+      "description": "Nuestras pizzas son conocidas por su masa fina y fresca, hecha a mano con un mínimo de 16 horas de fermentación.\nNos enorgullece preparar nuestra masa en casa, asegurando la calidad y el sabor que nos distinguen.\nPara los ingredientes, utilizamos productos frescos de proveedores locales, junto con productos genuinos importados de Italia, como nuestra salsa de tomate y queso mozzarella.\nCon más de 20 años de experiencia en la preparación de pizzas, cada una refleja nuestra pasión y compromiso de ofrecer lo mejor a nuestros clientes."
+    },
+    "pasta": {
+      "name": "Pasta",
+      "description": "Desde sabrosas y cremosas hasta ligeras y picantes.\nPuedes mezclar cualquier pasta con cualquier salsa a tu gusto para una experiencia única y deliciosa.\nCada salsa está creada para complementar nuestras pastas, asegurando que la comida no solo sea satisfactoria, sino un verdadero deleite para el paladar.\nTodo encaja perfectamente, elige y combina como desees."
+    },
+    "salsa": {
+      "name": "Salsas",
+      "description": "Elige tu salsa favorita para acompañar nuestros platos de pasta. Cada una está elaborada para complementar nuestra amplia variedad de pastas, asegurando que cada comida sea no solo satisfactoria, sino un verdadero placer para el paladar. Desde las ricas y cremosas hasta las ligeras y sabrosas, nuestras salsas están hechas con ingredientes frescos y una mezcla de técnicas tradicionales e innovadoras para mejorar tu experiencia gastronómica. Ya sea que prefieras los sabores intensos de un clásico Boloñesa o la sencillez delicada de un Aglio e Olio, nuestra selección tiene la salsa perfecta para completar tu plato de pasta perfecto."
+    },
+    "bruschettas": {
+      "jamon": "Jamón",
+      "salmon": "Salmón",
+      "name": "Bruschettas",
+      "description": "Elige tu bruschetta favorita de nuestra selección, cada una elaborada para proporcionar una experiencia de sabor única. Nuestras bruschettas están hechas con pan recién horneado, cubierto con los mejores ingredientes para resaltar un estallido de sabor en cada bocado. Desde la sabrosa bruschetta de salmón con su delicada combinación de sabores hasta la clásica bruschetta de Jamón York con su sabor rico y reconfortante, hay una variedad para satisfacer cada paladar. Perfectas como entrante o comida ligera, nuestras bruschettas son una excelente manera de comenzar tu viaje culinario con nosotros."
+    },
+    "ingredients": {
+      "pan_tostado": "Pan Tostado",
+      "tomate_salsa": "Salsa de Tomate",
+      "mozzarella": "Mozzarella",
+      "salmon": "Salmón",
+      "jamon_york": "Jamón York",
+      "ajo": "Ajo",
+      "albahaca": "Albahaca",
+      "4_quesos": "Cuatro Quesos",
+      "bechamel": "Bechamel",
+      "calabacin": "Calabacín",
+      "perejil": "Perejil",
+      "berenjena": "Berenjena",
+      "picante": "Picante",
+      "carne_picada": "Carne Picada",
+      "beicon": "Beicon",
+      "yema_huevo": "Yema de Huevo",
+      "salsa_tomate": "Salsa de Tomate",
+      "gambas": "Gambas",
+      "pinones": "Piñones",
+      "queso_parmesano": "Queso Parmesano",
+      "aceite_oliva": "Aceite de Oliva",
+      "crema_nueces": "Crema de Nueces",
+      "pollo": "Pollo",
+      "champinon": "Champiñón",
+      "oregano": "y Orégano",
+      "peperoni": "Pepperoni",
+      "cebolla": "Cebolla",
+      "aceitunas_negra": "Aceitunas Negras",
+      "huevo": "Huevo",
+      "anchoas": "Anchoas",
+      "alcachofas": "Alcachofas",
+      "pina": "Piña",
+      "jamon_serrano": "Jamón Serrano",
+      "rucula": "Rúcula",
+      "queso_fresco": "Queso Fresco",
+      "atun": "Atún",
+      "salsa_barbacoa": "Salsa Barbacoa",
+      "nata": "Nata",
+      "tomate_cherry": "Tomate Cherry",
+      "pesto_sauce": "Salsa Pesto (Albahaca, Piñones, Queso Parmesano, Aceite de Oliva)"
+    },
+    "allergens": {
+      "gluten": "Gluten",
+      "fish": "Pescado",
+      "crustaceans": "Crustáceos",
+      "eggs": "Huevos",
+      "soy": "Soja",
+      "peanuts": "Cacahuetes",
+      "tree_nuts": "Frutos Secos",
+      "dairy": "Lácteos",
+      "mustard": "Mostaza",
+      "celery": "Apio",
+      "sulphites": "Sulfitos",
+      "sesame": "Sésamo",
+      "lupin": "Altramuces",
+      "molluscs": "Moluscos",
+      "spicy": "Picante"
+    }
+  },
+  "cookiePolicy": {
+    "title": "Política de Cookies",
+    "intro": "En DaKiko - Pasta e Pizza, priorizamos tu privacidad en línea y nos esforzamos por ofrecerte la mejor experiencia posible al visitar nuestro sitio web. Queremos informarte que no utilizamos cookies con fines de seguimiento o publicidad. Sin embargo, empleamos ciertas tecnologías para mejorar tu experiencia de navegación y personalizar el contenido según tus preferencias.",
+    "localStorage": {
+      "header": "Qué Utilizamos",
+      "title": "Almacenamiento Local",
+      "description": "Utilizamos almacenamiento local para recordar tus preferencias de idioma y si prefieres un tema claro u oscuro en nuestro sitio web."
+    },
+    "trackingCookies": {
+      "header": "Lo Que No Utilizamos",
+      "title": "Cookies de Seguimiento",
+      "description": "No utilizamos cookies para rastrear tu comportamiento de navegación en otros sitios web."
+    },
+    "advertisingCookies": {
+      "header": "Lo Que No Utilizamos",
+      "title": "Cookies Publicitarias",
+      "description": "No utilizamos cookies para publicidad dirigida."
+    },
+    "thirdPartyCookies": {
+      "header": "Lo Que No Utilizamos",
+      "title": "Cookies de Terceros",
+      "description": "No permitimos cookies de terceros en nuestro sitio web."
+    },
+    "consent": {
+      "header": "Tu Consentimiento",
+      "description": "Al utilizar nuestro sitio web, aceptas el uso de almacenamiento local para los fines descritos anteriormente. Puedes gestionar tus preferencias en cualquier momento ajustando la configuración de tu navegador o contactándonos directamente."
+    },
+    "questions": {
+      "header": "¿Preguntas?",
+      "description": "Si tienes alguna pregunta o preocupación sobre nuestro uso de almacenamiento local o tu privacidad en nuestro sitio web, por favor contáctanos."
+    },
+    "closing": "¡Gracias por elegir DaKiko - Pasta e Pizza! ¡Esperamos que disfrutes tu visita!"
+  }
+}

@@ -1,0 +1,105 @@
+@use "../abstracts" as *;
+
+footer {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  a {
+    color: $base;
+    text-decoration: none;
+    margin-bottom: 1em;
+  }
+  background-color: $text;
+  color: $base;
+  min-height: 20em;
+
+  .footer__top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @media (width >= 50em) {
+      flex-direction: row;
+      justify-content: center;
+    }
+    .menu,
+    #contact {
+      width: min(30em, 50%);
+      padding-block: 3em;
+      .direction {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1em;
+        div {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+    .menu ul,
+    #contact ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1em;
+      li {
+        line-height: 2em;
+      }
+    }
+    .menu {
+      a {
+        position: relative;
+        &:after {
+          position: absolute;
+          content: "";
+          height: 0.1em;
+          width: 0;
+          background-color: $base;
+          bottom: -0.3em;
+          left: 0;
+          @include transition300;
+        }
+        &:hover:after {
+          width: 100%;
+        }
+      }
+    }
+    #contact {
+      @media (width >= 50em) {
+        text-align: right;
+        ul {
+          align-items: flex-end;
+        }
+        .direction {
+          display: flex;
+          flex-direction: row-reverse;
+          align-items: flex-start;
+          gap: 1em;
+          div {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+  .footer__bottom {
+    width: min(60em, calc(100% - 2em));
+    margin-inline: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+    padding-block: 1em;
+    .policy {
+      cursor: pointer;
+    }
+  }
+}

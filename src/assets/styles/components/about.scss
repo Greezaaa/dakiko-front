@@ -1,0 +1,139 @@
+@use "../abstracts" as *;
+#about {
+  padding: 15em 0 10em;
+  max-width: 100dvw;
+  overflow: hidden;
+
+  .wrapper {
+    width: min(70em, calc(100% - 2em));
+    margin-inline: auto;
+
+    article {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 2em;
+      margin-bottom: 5em;
+
+      .left {
+        width: 90%;
+        margin-inline: 0 auto;
+        position: relative;
+        img {
+          border-radius: 0.3em;
+          width: 100%;
+          min-height: 100%;
+          object-fit: cover;
+          height: 15em;
+          position: relative;
+          transition: transform 300ms ease-out;
+          &:hover {
+            transform: scale(1.01);
+          }
+        }
+        &:after {
+          position: absolute;
+          content: "";
+          width: 40px;
+          height: 40px;
+          top: 0;
+          right: 0;
+          border-top: 2px solid $accent-primary;
+          border-right: 2px solid $accent-primary;
+          opacity: 1;
+          @include transition300;
+          z-index: -1;
+        }
+        &:before {
+          position: absolute;
+          content: "";
+          width: 40px;
+          height: 40px;
+          bottom: 3px;
+          left: 0px;
+          border-bottom: 2px solid $accent-tertiary;
+          border-left: 2px solid $accent-tertiary;
+          opacity: 1;
+          z-index: -1;
+          @include transition300;
+        }
+        &:hover {
+          &:after {
+            opacity: 0;
+            top: -20px;
+            right: -20px;
+          }
+          &:before {
+            opacity: 0;
+            bottom: -20px;
+            left: -20px;
+          }
+        }
+      }
+      &:nth-child(odd) .left {
+        margin-inline: auto 0;
+      }
+
+      .right {
+        width: 70%;
+        margin-inline: auto 0;
+        h3 {
+          font-size: clamp(1.7em, 3dvw, 2em);
+          margin-bottom: 1em;
+          color: $accent-primary;
+        }
+        p {
+          font-size: 1.3em;
+          margin-bottom: 1em;
+        }
+      }
+      &:nth-child(odd) .right {
+        margin-inline: 0 auto;
+      }
+      @media (700px <= width) {
+        flex-direction: row;
+        &:nth-child(odd) {
+          flex-direction: row-reverse;
+        }
+        .left {
+          width: 35%;
+        }
+
+        .right {
+          width: calc(65% - 2em);
+        }
+      }
+
+      // &::before {
+      //   content: "";
+      //   position: absolute;
+      //   width: 110%;
+      //   height: 70%;
+      //   left: -10%;
+      //   top: 15%;
+      //   background-color: $accent-secondary;
+      //   z-index: -1;
+      // }
+      // &:nth-child(1) {
+      //   .left {
+      //     &::before {
+      //       background-color: lightseagreen;
+      //     }
+      //   }
+      // }
+      // &:nth-child(3) {
+      //   .left {
+      //     &::before {
+      //       background-color: $accent-tertiary;
+      //     }
+      //   }
+      // }
+      // &:nth-child(4) {
+      //   .left {
+      //     &::before {
+      //       background-color: lightcoral;
+      //     }
+      //   }
+      // }
+    }
+  }
+}

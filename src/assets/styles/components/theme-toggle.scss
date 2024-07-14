@@ -1,0 +1,18 @@
+@use "../abstracts" as *;
+
+.theme-toggle {
+  display: grid;
+  place-content: center;
+  .toggle-btn {
+    background-color: transparent;
+    // filter: drop-shadow(0 0 5px $accent-secondary);
+    border: none;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+
+    svg {
+      fill: $text;
+    }
+  }
+}
