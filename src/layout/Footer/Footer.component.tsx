@@ -37,7 +37,7 @@ const FooterComponent = () => {
               <Link to="/#about">{t("header.nav.about")}</Link>
             </li>
             <li>
-              <Link to="/#s">{t("header.nav.schedules")}</Link>
+              <Link to="/#schedules">{t("header.nav.schedules")}</Link>
             </li>
             {!menu && (
               <li>
