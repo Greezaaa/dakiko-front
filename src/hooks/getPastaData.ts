@@ -1,4 +1,4 @@
-import Tagliatelle from "@assets/images/Tagliatelle.webp";
+import Tagliatelle from "@assets/images/Tagliatella.webp";
 import Gnocchi from "@assets/images/Gnocchi.webp";
 import Spaghetti from "@assets/images/Spaghetti.webp";
 
