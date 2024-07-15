@@ -44,13 +44,16 @@ const HeaderComponent: React.FC = () => {
           <ul>
             <li>
               <Link to="/" onClick={handleLinkClick}>
-                Home
+                {t("header.nav.home")}
               </Link>
+            </li>
+            <li>
+              <Link to="/#schedules">{t("header.nav.schedules")}</Link>
             </li>
             {!menu && (
               <li>
                 <Link to="/menu" onClick={handleLinkClick}>
-                  Menu
+                  {t("header.nav.menu")}
                 </Link>
               </li>
             )}
@@ -58,17 +61,17 @@ const HeaderComponent: React.FC = () => {
               <>
                 <li>
                   <a href="#pizza" onClick={handleLinkClick}>
-                    Pizza
+                    {t("header.nav.pizza")}
                   </a>
                 </li>
                 <li>
                   <a href="#pasta" onClick={handleLinkClick}>
-                    Pasta
+                    {t("header.nav.pasta")}
                   </a>
                 </li>
                 <li>
                   <a href="#bruschettas" onClick={handleLinkClick}>
-                    Bruschettas
+                    {t("header.nav.bruschettas")}
                   </a>
                 </li>
               </>

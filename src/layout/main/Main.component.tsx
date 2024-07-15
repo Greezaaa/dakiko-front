@@ -7,20 +7,24 @@ import TopBannerComponent from "@layout/Header/TopBanner.component";
 import FooterComponent from "@layout/Footer/Footer.component";
 import BackgroundComponent from "@components/background/BackgroundComponent";
 import CookieBanner from "@components/cookie-banner/CookieBanner";
+import useLanguageSetup from "@hooks/useLanguageSetup";
 
-const Main: React.FC = () => (
-  <>
-    <BackgroundComponent />
-    <TopBannerComponent />
-    <HeaderComponent />
-    <Routes>
-      <Route path="/" element={<HomeComponent />} />
-      <Route path="/menu" element={<MenuComponent />} />
-      <Route path="*" element={<HomeComponent />} />
-    </Routes>
-    <CookieBanner />
-    <FooterComponent />
-  </>
-);
+const Main: React.FC = () => {
+  useLanguageSetup();
+  return (
+    <>
+      <BackgroundComponent />
+      <TopBannerComponent />
+      <HeaderComponent />
+      <Routes>
+        <Route path="/" element={<HomeComponent />} />
+        <Route path="/menu" element={<MenuComponent />} />
+        <Route path="*" element={<HomeComponent />} />
+      </Routes>
+      <CookieBanner />
+      <FooterComponent />
+    </>
+  );
+};
 
 export default Main;
