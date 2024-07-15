@@ -13,4 +13,5 @@ export const address: Address = {
   direction: "Carrer de Porreres, 10, Playa d'en Bossa, Illes Balears",
   phone: "+34 689 99 12 10",
   phoneNumber: 34689991210,
+  instagram: "@dakikoibiza | the best pizza",
 };

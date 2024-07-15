@@ -11,4 +11,5 @@ export interface Address {
   direction: string;
   phone: string;
   phoneNumber: number;
+  instagram: string;
 }

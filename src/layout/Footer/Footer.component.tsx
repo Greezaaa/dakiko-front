@@ -8,6 +8,7 @@ import UseGetTranslationKey from "@hooks/getTranslationKey";
 import CookieBanner from "@components/cookie-banner/CookieBanner";
 import useScroll from "@hooks/useScroll";
 import ThemeToggle from "@components/theme-toggle/theme-toggle";
+import InstagramIcon from "@components/Icons/InstagramIcon";
 
 const FooterComponent = () => {
   const t = UseGetTranslationKey();
@@ -86,6 +87,19 @@ const FooterComponent = () => {
               >
                 <PhoneIcon />
                 <span className="banner__text">{actualAddress.phone}</span>
+              </a>
+            </li>
+            <li>
+              <a
+                className="instagram"
+                href="https://www.instagram.com/dakikoibiza/"
+                target="_blank"
+                title={actualAddress.instagram}
+              >
+                <InstagramIcon />
+                <span className="banner__text">
+                  {t("global.social.instagram")}
+                </span>
               </a>
             </li>
           </ul>
