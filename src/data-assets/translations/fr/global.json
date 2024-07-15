@@ -170,6 +170,10 @@
     }
   },
   "cookiePolicy": {
+    "accept": "Accepter",
+    "disagree": "Pas d'accord",
+    "readMore": "Lire la suite",
+    "cookiePolicy": "Nous n'utilisons pas de cookies",
     "title": "Politique de cookies",
     "intro": "Chez DaKiko - Pasta e Pizza, nous accordons une grande importance à votre vie privée en ligne et nous nous efforçons de vous offrir la meilleure expérience possible lors de votre visite sur notre site web. Nous tenons à vous informer que nous n'utilisons pas de cookies à des fins de suivi ou de publicité. Cependant, nous utilisons certaines technologies pour améliorer votre expérience de navigation et personnaliser le contenu en fonction de vos préférences.",
     "localStorage": {

@@ -49,18 +49,17 @@ const CookieBanner = forwardRef((_, ref) => {
     <>
       {showBanner && (
         <div className="cookie-banner">
-          {showBanner && " show banner is true"}
-          {!showBanner && " show banner is false"}
-          <p>We don't use cookies &#127850;</p>
+          <p>{t("cookiePolicy.cookiePolicy")}&#127850;</p>
+          <p>{t("cookiePolicy.consent.description")}</p>
           <div className="buttons center">
             <button className="c__btn accept" onClick={handleAccept}>
-              I understand
+              {t("cookiePolicy.accept")}
             </button>
             <button className="c__btn cancel" onClick={handleCancel}>
-              I disagree
+              {t("cookiePolicy.disagree")}
             </button>
             <button className="c__btn info" onClick={handleReadMore}>
-              Read more
+              {t("cookiePolicy.readMore")}
             </button>
           </div>
         </div>
@@ -104,10 +103,10 @@ const CookieBanner = forwardRef((_, ref) => {
               <p>{t("cookiePolicy.questions.description")}</p>
               <div className="buttons modal-buttons">
                 <button className="c__btn accept" onClick={handleAccept}>
-                  I agree
+                  {t("cookiePolicy.accept")}
                 </button>
                 <button className="c__btn cancel" onClick={handleCancel}>
-                  I disagree
+                  {t("cookiePolicy.disagree")}
                 </button>
               </div>
             </div>

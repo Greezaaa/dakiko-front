@@ -12,6 +12,13 @@
   text-align: center;
   overflow: hidden;
   z-index: 10;
+  width: min(350px, 100% - 1em);
+  p:is(:first-child) {
+    font-weight: bold;
+  }
+  p {
+    margin-bottom: 1em;
+  }
 }
 
 .cookie-banner.hide {
