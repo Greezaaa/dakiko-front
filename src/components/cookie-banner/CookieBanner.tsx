@@ -10,31 +10,35 @@ import {
 
 const CookieBanner = forwardRef((_, ref) => {
   const t = UseGetTranslationKey();
-  const [showBanner, setShowBanner] = useState(true);
-  const [showModal, setShowModal] = useState(false);
-  const modalRef = useRef(null);
+  const [showBanner, setShowBanner] = useState<boolean>(true);
+  const [showModal, setShowModal] = useState<boolean>(false);
+  const modalRef = useRef<HTMLDivElement | null>(null);
+
   useEffect(() => {
     const isAccepted = localStorage.getItem("cAccepted") === "true";
     setShowBanner(!isAccepted);
   }, []);
+
   const handleAccept = () => {
     localStorage.setItem("cAccepted", "true");
     setShowModal(false);
     setShowBanner(false);
   };
+
   const handleCancel = () => {
     localStorage.setItem("cAccepted", "false");
     setShowModal(false);
-    setShowBanner(false);
+    setShowBanner(true);
   };
+
   const handleReadMore = () => {
     setShowModal(true);
   };
+
   const closeModal = () => {
     setShowModal(false);
-    const isAccepted = localStorage.getItem("cAccepted") === "true";
-    setShowBanner(!isAccepted);
   };
+
   useImperativeHandle(ref, () => ({
     openModal() {
       setShowModal(true);
@@ -45,6 +49,8 @@ const CookieBanner = forwardRef((_, ref) => {
     <>
       {showBanner && (
         <div className="cookie-banner">
+          {showBanner && " show banner is true"}
+          {!showBanner && " show banner is false"}
           <p>We don't use cookies &#127850;</p>
           <div className="buttons center">
             <button className="c__btn accept" onClick={handleAccept}>
@@ -62,9 +68,9 @@ const CookieBanner = forwardRef((_, ref) => {
 
       {showModal && (
         <div className="modal" ref={modalRef}>
-          <div className="  modal-content">
+          <div className="modal-content">
             <div className="modal-actions">
-              <button className=" c__btn btn__close" onClick={closeModal}>
+              <button className="c__btn btn__close" onClick={closeModal}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
