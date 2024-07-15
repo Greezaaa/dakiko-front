@@ -13,7 +13,8 @@
       "@enums/*": ["src/models/enums/*"],
       "@hooks/*": ["src/hooks/*"],
       "@interfaces/*": ["src/models/interfaces/*"],
-      "@layout/*": ["src/layout/*"]
+      "@layout/*": ["src/layout/*"],
+      "@context/*": ["src/context/*"]
     },
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,

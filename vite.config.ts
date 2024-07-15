@@ -22,16 +22,17 @@ export default defineConfig({
       "@hooks": resolve(__dirname, "src/hooks"),
       "@interfaces": resolve(__dirname, "src/models/interfaces"),
       "@layout": resolve(__dirname, "src/layout"),
+      "@context": resolve(__dirname, "src/context"),
     },
   },
   build: {
     outDir: "dist",
   },
   server: {
-    middleware: [
-      {
-        historyFallback: true,
-      },
-    ],
+    // middleware: [
+    //   {
+    //     historyFallback: true,
+    //   },
+    // ],
   },
 });
