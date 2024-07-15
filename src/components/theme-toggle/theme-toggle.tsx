@@ -1,33 +1,13 @@
+import React from "react";
 import MoonIcon from "@components/Icons/MoonIcon";
 import SunIcon from "@components/Icons/SunIcon";
+import useSystemThemeSetup from "@hooks/useSystemThemeSetup";
 
-import { useEffect, useState } from "react";
-
-export const ThemeToggle = () => {
-  const [isDarkMode, setDarkMode] = useState(false);
-
-  useEffect(() => {
-    const savedDarkMode = localStorage.getItem("darkMode") === "true";
-    setDarkMode(savedDarkMode);
-
-    if (savedDarkMode) {
-      document.body.classList.add("dark");
-    } else {
-      document.body.classList.remove("dark");
-    }
-  }, []);
+const ThemeToggle: React.FC = () => {
+  const [isDarkMode, setDarkMode] = useSystemThemeSetup();
 
   const toggleDarkMode = () => {
-    const newDarkMode = !isDarkMode;
-    setDarkMode(newDarkMode);
-
-    if (newDarkMode) {
-      document.body.classList.add("dark");
-      localStorage.setItem("darkMode", "true");
-    } else {
-      document.body.classList.remove("dark");
-      localStorage.setItem("darkMode", "false");
-    }
+    setDarkMode(!isDarkMode);
   };
 
   return (
@@ -35,9 +15,9 @@ export const ThemeToggle = () => {
       <button
         className="toggle-btn"
         onClick={toggleDarkMode}
-        title={isDarkMode ? "Toggle Dark" : "Toggle Light"}
+        title={isDarkMode ? "Toggle Light" : "Toggle Dark"}
       >
-        {!isDarkMode ? <SunIcon /> : <MoonIcon />}
+        {isDarkMode ? <SunIcon /> : <MoonIcon />}
       </button>
     </div>
   );

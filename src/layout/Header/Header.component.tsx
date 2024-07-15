@@ -3,10 +3,9 @@ import logo from "@assets/images/logo_da_kiko.svg";
 import { useLocation, Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import LangMenu from "@components/lang-menu/lang-menu";
-import ThemeToggle from "@components/theme-toggle/theme-toggle";
 import useClickOutsideAndEscape from "@hooks/useClickOutsideAndEscape";
 import useScroll from "@hooks/useScroll";
-// import useViewport from "@hooks/useViewport";
+import ThemeToggle from "@components/theme-toggle/theme-toggle";
 
 const HeaderComponent: React.FC = () => {
   const t = UseGetTranslationKey();

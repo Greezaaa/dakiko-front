@@ -8,8 +8,8 @@ import FooterComponent from "@layout/Footer/Footer.component";
 import BackgroundComponent from "@components/background/BackgroundComponent";
 import CookieBanner from "@components/cookie-banner/CookieBanner";
 import useLanguageSetup from "@hooks/useLanguageSetup";
-import useSystemThemeSetup from "@hooks/useSystemThemeSeetup";
 import useVisitCounter from "@hooks/useFirstVisit";
+import useSystemThemeSetup from "@hooks/useSystemThemeSetup";
 
 const Main: React.FC = () => {
   useLanguageSetup();

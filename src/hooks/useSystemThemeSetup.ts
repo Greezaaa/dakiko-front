@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
 
-type UseSystemDarkModeToggleReturnType = [
-  boolean,
-  React.Dispatch<React.SetStateAction<boolean>>
-];
+type UseSystemDarkModeToggleReturnType = [boolean, (value: boolean) => void];
 
 const useSystemThemeSetup = (): UseSystemDarkModeToggleReturnType => {
   const [isDarkMode, setDarkMode] = useState<boolean>(false);
+
   useEffect(() => {
     const detectSystemDarkMode = () => {
       return (
@@ -16,25 +14,26 @@ const useSystemThemeSetup = (): UseSystemDarkModeToggleReturnType => {
     };
 
     const systemDarkModeEnabled = detectSystemDarkMode();
-    setDarkMode(systemDarkModeEnabled);
-    localStorage.setItem("darkMode", JSON.stringify(systemDarkModeEnabled));
-
-    const updateDarkModePreference = (value: boolean) => {
-      setDarkMode(value);
-      localStorage.setItem("darkMode", JSON.stringify(value));
-    };
+    applyTheme(systemDarkModeEnabled);
 
     const mediaQueryList = window.matchMedia("(prefers-color-scheme: dark)");
-    const handleChange = (e: MediaQueryListEvent) =>
-      updateDarkModePreference(e.matches);
+    const handleChange = (e: MediaQueryListEvent) => applyTheme(e.matches);
     mediaQueryList.addListener(handleChange);
 
     return () => {
       mediaQueryList.removeListener(handleChange);
     };
   }, []);
-
-  return [isDarkMode, setDarkMode];
+  const applyTheme = (isDark: boolean) => {
+    setDarkMode(isDark);
+    localStorage.setItem("darkMode", JSON.stringify(isDark));
+    if (isDark) {
+      document.body.classList.add("dark");
+    } else {
+      document.body.classList.remove("dark");
+    }
+  };
+  return [isDarkMode, (value: boolean) => applyTheme(value)];
 };
 
 export default useSystemThemeSetup;
