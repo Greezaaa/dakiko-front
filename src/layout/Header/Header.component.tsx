@@ -78,7 +78,7 @@ const HeaderComponent: React.FC = () => {
             )}
             <li>
               <Link to="/#contact" onClick={handleLinkClick}>
-                Contact
+                {t("header.nav.contact")}
               </Link>
             </li>
           </ul>
