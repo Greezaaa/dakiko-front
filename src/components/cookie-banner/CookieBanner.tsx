@@ -1,34 +1,38 @@
 import LangMenu from "@components/lang-menu/lang-menu";
 import UseGetTranslationKey from "@hooks/getTranslationKey";
-import {
-  useState,
-  useEffect,
-  useRef,
-  useImperativeHandle,
-  forwardRef,
-} from "react";
+import { useState, useEffect, useImperativeHandle, forwardRef } from "react";
 
 const CookieBanner = forwardRef((_, ref) => {
   const t = UseGetTranslationKey();
-  const [showBanner, setShowBanner] = useState<boolean>(true);
+
   const [showModal, setShowModal] = useState<boolean>(false);
-  const modalRef = useRef<HTMLDivElement | null>(null);
+  const [showBanner, setShowBanner] = useState(() => {
+    const hasAccepted = localStorage.getItem("cAccepted") === "true";
+    return !hasAccepted;
+  });
+
+  const handleCookiesClick = () => {
+    setShowModal(true);
+  };
 
   useEffect(() => {
-    const isAccepted = localStorage.getItem("cAccepted") === "true";
-    setShowBanner(!isAccepted);
+    const hasAccepted = localStorage.getItem("cAccepted") === "true";
+    setShowBanner(!hasAccepted);
   }, []);
 
+  const handleCookies = (value: boolean) => {
+    localStorage.setItem("cAccepted", value.toString());
+    setShowBanner(!value);
+  };
+
   const handleAccept = () => {
-    localStorage.setItem("cAccepted", "true");
+    handleCookies(true);
     setShowModal(false);
-    setShowBanner(false);
   };
 
   const handleCancel = () => {
-    localStorage.setItem("cAccepted", "false");
+    handleCookies(false);
     setShowModal(false);
-    setShowBanner(true);
   };
 
   const handleReadMore = () => {
@@ -47,8 +51,11 @@ const CookieBanner = forwardRef((_, ref) => {
 
   return (
     <>
+      <div className="policy" onClick={handleCookiesClick}>
+        &#127850;
+      </div>
       {showBanner && (
-        <div className="cookie-banner">
+        <div key="banner" className="cookie-banner">
           <p>{t("cookiePolicy.cookiePolicy")}&#127850;</p>
           <p>{t("cookiePolicy.consent.description")}</p>
           <div className="buttons center">
@@ -64,9 +71,8 @@ const CookieBanner = forwardRef((_, ref) => {
           </div>
         </div>
       )}
-
       {showModal && (
-        <div className="modal" ref={modalRef}>
+        <div className="modal">
           <div className="modal-content">
             <div className="modal-actions">
               <button className="c__btn btn__close" onClick={closeModal}>
@@ -88,15 +94,12 @@ const CookieBanner = forwardRef((_, ref) => {
               <p>{t("cookiePolicy.intro")}</p>
               <h3>{t("cookiePolicy.localStorage.header")}</h3>
               <p>{t("cookiePolicy.localStorage.description")}</p>
-
               <h3>{t("cookiePolicy.trackingCookies.header")}</h3>
-
               <ul>
                 <li>{t("cookiePolicy.trackingCookies.description")}</li>
                 <li>{t("cookiePolicy.advertisingCookies.description")}</li>
                 <li>{t("cookiePolicy.thirdPartyCookies.description")}</li>
               </ul>
-
               <h3>{t("cookiePolicy.consent.header")}</h3>
               <p>{t("cookiePolicy.consent.description")}</p>
               <h3>{t("cookiePolicy.questions.header")}</h3>
