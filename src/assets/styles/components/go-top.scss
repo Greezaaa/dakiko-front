@@ -1,0 +1,26 @@
+@use "../abstracts" as *;
+.back-to-top {
+  position: fixed;
+  bottom: 2dvh;
+  z-index: 10;
+  display: grid;
+  place-content: center;
+  width: 100%;
+}
+
+.back-to-top button {
+  background-color: $base;
+  color: $text;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 2em;
+  line-height: 1em;
+  font-weight: bold;
+}
+
+.back-to-top button:hover {
+  background-color: $text;
+  color: $base;
+}
