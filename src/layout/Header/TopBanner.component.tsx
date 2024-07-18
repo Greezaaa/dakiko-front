@@ -5,6 +5,7 @@ import useOpenCloseStatus from "@hooks/useOpenCloseStatus";
 import PhoneIcon from "@components/Icons/PhoneIcon";
 import PlacesIcon from "@components/Icons/PlacesIcon";
 import UseGetTranslationKey from "@hooks/getTranslationKey";
+import { Link } from "react-router-dom";
 
 const TopBannerComponent: React.FC = () => {
   const t = UseGetTranslationKey();
@@ -37,8 +38,10 @@ const TopBannerComponent: React.FC = () => {
             : t("header.topBanner.close")
         }`}
       >
-        {status.isOpen ? "🟢" : "🔴"}
-        <span className="banner__text"> {status.text}</span>
+        <Link to="/#schedules" title={t("header.nav.schedules")}>
+          {status.isOpen ? "🟢" : "🔴"}
+          <span className="banner__text"> {status.text}</span>
+        </Link>
       </div>
     </div>
   );

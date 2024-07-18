@@ -6,10 +6,10 @@ import HeaderComponent from "@layout/Header/Header.component";
 import TopBannerComponent from "@layout/Header/TopBanner.component";
 import FooterComponent from "@layout/Footer/Footer.component";
 import BackgroundComponent from "@components/background/BackgroundComponent";
-import CookieBanner from "@components/cookie-banner/CookieBanner";
 import useLanguageSetup from "@hooks/useLanguageSetup";
 import useVisitCounter from "@hooks/useFirstVisit";
 import useSystemThemeSetup from "@hooks/useSystemThemeSetup";
+import BackToTopButton from "@components/backToTopButton/BackToTopButton";
 
 const Main: React.FC = () => {
   useLanguageSetup();
@@ -25,7 +25,8 @@ const Main: React.FC = () => {
         <Route path="/menu" element={<MenuComponent />} />
         <Route path="*" element={<HomeComponent />} />
       </Routes>
-      <CookieBanner />
+
+      <BackToTopButton />
       <FooterComponent />
     </>
   );

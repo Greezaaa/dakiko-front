@@ -4,13 +4,13 @@ const SchedulesComponent: React.FC = () => {
   const [t] = useTranslation("global");
 
   const schedule = [
-    { day: t("global.days.Monday"), hours: "10:00 - 02:00" },
-    { day: t("global.days.Tuesday"), hours: "10:00 - 02:00" },
-    { day: t("global.days.Wednesday"), hours: "10:00 - 02:00" },
-    { day: t("global.days.Thursday"), hours: "10:00 - 02:00" },
-    { day: t("global.days.Friday"), hours: "10:00 - 02:00" },
-    { day: t("global.days.Saturday"), hours: "10:00 - 02:00" },
-    { day: t("global.days.Sunday"), hours: "10:00 - 02:00" },
+    { day: t("global.days.Monday"), hours: "12:00PM - 08:00AM" },
+    { day: t("global.days.Tuesday"), hours: "12:00PM - 08:00AM" },
+    { day: t("global.days.Wednesday"), hours: "12:00PM - 08:00AM" },
+    { day: t("global.days.Thursday"), hours: "12:00PM - 08:00AM" },
+    { day: t("global.days.Friday"), hours: "12:00PM - 08:00AM" },
+    { day: t("global.days.Saturday"), hours: "12:00PM - 08:00AM" },
+    { day: t("global.days.Sunday"), hours: "12:00PM - 08:00AM" },
     // { day: t("global.days.Sunday"), hours: t("schedules.close") },
   ];
 
