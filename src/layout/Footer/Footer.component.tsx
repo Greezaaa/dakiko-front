@@ -6,17 +6,18 @@ import PlacesIcon from "@components/Icons/PlacesIcon";
 import { Link, useLocation } from "react-router-dom";
 import UseGetTranslationKey from "@hooks/getTranslationKey";
 import CookieBanner from "@components/cookie-banner/CookieBanner";
-// import useScroll from "@hooks/useScroll";
-// import ThemeToggle from "@components/theme-toggle/theme-toggle";
+import useScroll from "@hooks/useScroll";
+import ThemeToggle from "@components/theme-toggle/theme-toggle";
 import InstagramIcon from "@components/Icons/InstagramIcon";
+import { useState } from "react";
 
 const FooterComponent = () => {
   const t = UseGetTranslationKey();
   const actualAddress: Address = address;
   const location = useLocation();
   const menu = location.pathname === "/menu";
-  // const [isScrolled, setScrolled] = useState(false);
-  // useScroll((scrolled) => setScrolled(scrolled), 550);
+  const [isScrolled, setScrolled] = useState(false);
+  useScroll((scrolled) => setScrolled(scrolled), 550);
 
   return (
     <footer className="footer">
@@ -116,7 +117,7 @@ const FooterComponent = () => {
         </div>
         <CookieBanner />
       </div>
-      {/* {!isScrolled && <ThemeToggle></ThemeToggle>} */}
+      {!isScrolled && <ThemeToggle></ThemeToggle>}
     </footer>
   );
 };

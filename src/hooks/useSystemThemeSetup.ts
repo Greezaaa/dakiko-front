@@ -12,16 +12,25 @@ const useSystemThemeSetup = (): UseSystemDarkModeToggleReturnType => {
         window.matchMedia("(prefers-color-scheme: dark)").matches
       );
     };
-
-    const systemDarkModeEnabled = detectSystemDarkMode();
-    applyTheme(systemDarkModeEnabled);
-
+    const storedPreference = localStorage.getItem("darkMode");
+    const userPreference = storedPreference
+      ? JSON.parse(storedPreference)
+      : null;
+    if (userPreference !== null) {
+      applyTheme(userPreference);
+    } else {
+      const systemDarkModeEnabled = detectSystemDarkMode();
+      applyTheme(systemDarkModeEnabled);
+    }
     const mediaQueryList = window.matchMedia("(prefers-color-scheme: dark)");
-    const handleChange = (e: MediaQueryListEvent) => applyTheme(e.matches);
-    mediaQueryList.addListener(handleChange);
-
+    const handleChange = (e: MediaQueryListEvent) => {
+      if (userPreference === null) {
+        applyTheme(e.matches);
+      }
+    };
+    mediaQueryList.addEventListener("change", handleChange);
     return () => {
-      mediaQueryList.removeListener(handleChange);
+      mediaQueryList.removeEventListener("change", handleChange);
     };
   }, []);
   const applyTheme = (isDark: boolean) => {
@@ -35,5 +44,4 @@ const useSystemThemeSetup = (): UseSystemDarkModeToggleReturnType => {
   };
   return [isDarkMode, (value: boolean) => applyTheme(value)];
 };
-
 export default useSystemThemeSetup;

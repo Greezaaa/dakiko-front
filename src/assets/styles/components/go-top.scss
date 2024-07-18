@@ -9,7 +9,7 @@
 }
 
 .back-to-top button {
-  background-color: $base;
+  background-color: $accent-secondary;
   color: $text;
   border: none;
   padding: 5px 10px;
@@ -18,9 +18,10 @@
   font-size: 2em;
   line-height: 1em;
   font-weight: bold;
+  @include transition300;
 }
 
 .back-to-top button:hover {
   background-color: $text;
-  color: $base;
+  color: $accent-secondary;
 }
