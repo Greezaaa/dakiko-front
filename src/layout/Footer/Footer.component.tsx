@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+// import { useState } from "react";
 import { address } from "@data-assets/address/address";
 import { Address } from "@interfaces/address.interface";
 import PhoneIcon from "@components/Icons/PhoneIcon";
@@ -6,8 +6,8 @@ import PlacesIcon from "@components/Icons/PlacesIcon";
 import { Link, useLocation } from "react-router-dom";
 import UseGetTranslationKey from "@hooks/getTranslationKey";
 import CookieBanner from "@components/cookie-banner/CookieBanner";
-import useScroll from "@hooks/useScroll";
-import ThemeToggle from "@components/theme-toggle/theme-toggle";
+// import useScroll from "@hooks/useScroll";
+// import ThemeToggle from "@components/theme-toggle/theme-toggle";
 import InstagramIcon from "@components/Icons/InstagramIcon";
 
 const FooterComponent = () => {
@@ -15,16 +15,8 @@ const FooterComponent = () => {
   const actualAddress: Address = address;
   const location = useLocation();
   const menu = location.pathname === "/menu";
-  const cookieBannerRef = useRef(null);
-  const [isScrolled, setScrolled] = useState(false);
-  useScroll((scrolled) => setScrolled(scrolled), 550);
-
-  const handleCookiesClick = () => {
-    if (cookieBannerRef.current) {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (cookieBannerRef.current as any).openModal();
-    }
-  };
+  // const [isScrolled, setScrolled] = useState(false);
+  // useScroll((scrolled) => setScrolled(scrolled), 550);
 
   return (
     <footer className="footer">
@@ -40,8 +32,10 @@ const FooterComponent = () => {
             {!menu && (
               <li>
                 <Link to="/menu">{t("header.nav.menu")}</Link>
+                <ul></ul>
               </li>
             )}
+
             {menu && (
               <>
                 <li>
@@ -55,6 +49,9 @@ const FooterComponent = () => {
                 </li>
               </>
             )}
+            <li>
+              <Link to="/#schedules">{t("header.nav.schedules")}</Link>
+            </li>
           </ul>
         </div>
         <div id="contact">
@@ -117,12 +114,9 @@ const FooterComponent = () => {
             Jeka
           </a>
         </div>
-        <div className="policy" onClick={handleCookiesClick}>
-          &#127850;
-        </div>
+        <CookieBanner />
       </div>
-      <CookieBanner ref={cookieBannerRef} />
-      {!isScrolled && <ThemeToggle></ThemeToggle>}
+      {/* {!isScrolled && <ThemeToggle></ThemeToggle>} */}
     </footer>
   );
 };
