@@ -39,7 +39,8 @@
       "schedules": "Orari",
       "bruschettas": "Bruschetta",
       "pasta": "Pasta",
-      "pizza": "Pizza"
+      "pizza": "Pizza",
+      "goTop": "Torna su"
     },
     "topBanner": {
       "adres": "La nostra posizione: ",

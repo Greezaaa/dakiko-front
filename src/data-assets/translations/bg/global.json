@@ -39,7 +39,8 @@
       "schedules": "Работно време",
       "bruschettas": "Брускети",
       "pasta": "Паста",
-      "pizza": "Пица"
+      "pizza": "Пица",
+      "goTop": "Обратно нагоре"
     },
     "topBanner": {
       "adres": "Нашето място: ",

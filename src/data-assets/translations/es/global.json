@@ -39,7 +39,8 @@
       "schedules": "Horarios",
       "bruschettas": "Bruschettas",
       "pasta": "Pasta",
-      "pizza": "Pizza"
+      "pizza": "Pizza",
+      "goTop": "Volver arriba"
     },
     "topBanner": {
       "adres": "Nuestra ubicación: ",
@@ -171,7 +172,7 @@
     }
   },
   "cookiePolicy": {
-    "accept": "Aceptar",
+    "accept": "Lo entiendo",
     "disagree": "No estoy de acuerdo",
     "readMore": "Leer más",
     "cookiePolicy": "We don't use cookies",
