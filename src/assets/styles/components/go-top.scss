@@ -6,9 +6,12 @@
   display: grid;
   place-content: center;
   width: 100%;
+  pointer-events: none;
+  user-select: none;
 }
 
 .back-to-top button {
+  pointer-events: all;
   background-color: $accent-secondary;
   color: $text;
   border: none;
